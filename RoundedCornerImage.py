@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw
 
 class RoundedCornerImage(ctk.CTkFrame):
 
-    def __init__(self, master, imagePath, cornerRadius = defaultCornerRadius, width = defaultButtonSize, height = defaultButtonSize):
+    def __init__(self, master, imagePath, cornerRadius = defaultCornerRadius, width = defaultSize, height = defaultSize):
 
         super().__init__(master, corner_radius = cornerRadius, width = width, height = height, fg_color = "transparent")
 

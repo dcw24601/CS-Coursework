@@ -6,9 +6,9 @@ class CircleButton(ctk.CTkFrame):
                 master,
                 text = "",
                 command = None,
-                size = defaultButtonSize,
-                fgColour = defaultButtonColour,
-                hoverColour = defaultButtonHoverColour,
+                size = defaultSize,
+                fgColour = defaultColour,
+                hoverColour = defaultHoverColour,
                 textColour = defaultTextColour,
                 textYOffset = 0,
                 font = defaultBoldFont):

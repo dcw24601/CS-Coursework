@@ -1,3 +1,3 @@
 from Window import *
 
-window = Window("Search bar test")
+window = Window("[Insert good app name here]")

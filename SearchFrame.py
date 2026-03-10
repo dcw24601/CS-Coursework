@@ -1,7 +1,6 @@
 import customtkinter as ctk
 from Defaults import *
-from Gradient import CircleGradient
-from SearchBar import SearchBar
+from TextEntry import TextEntryBar
 from CircleButton import CircleButton
 from SearchResultFrame import SearchResultFrame
 
@@ -13,9 +12,9 @@ class SearchFrame(ctk.CTkFrame):
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(1, weight = 1)
 
-        searchBar = SearchBar(self)
-        searchBar.grid(padx = defaultPadding, pady = (defaultPadding, 0), row = 0, column = 0, sticky = "ew")
-        searchBar.lift()
+        self.searchBar = TextEntryBar(self)
+        self.searchBar.grid(padx = defaultPadding, pady = (defaultPadding, 0), row = 0, column = 0, sticky = "ew")
+        self.searchBar.lift()
 
         searchButton = CircleButton(self, text = "\u2315", textYOffset = 0.05)
         searchButton.grid(row = 0, column = 1, padx = defaultPadding, pady = (defaultPadding, 0))

@@ -1,8 +1,6 @@
 import customtkinter as ctk
-from SearchFrame import SearchFrame
-from SidebarFrame import SidebarFrame
-from Defaults import *
-from ToolbarFrame import ToolbarFrame
+from MainContentPage import MainContentPage
+from SignInPage import SignInPage
 
 class Window(ctk.CTk):
 
@@ -11,14 +9,17 @@ class Window(ctk.CTk):
 
         self.title(windowText)
 
-        self.columnconfigure(1, weight = 1)
-        self.rowconfigure(1, weight = 1)
+        self.columnconfigure(0, weight = 1)
+        self.rowconfigure(0, weight = 1)
 
-        SearchFrame(self).grid(row = 1, column = 1, padx = defaultPadding, pady = defaultPadding, sticky = "nsew")
-        SidebarFrame(self).grid(row = 1, column = 0, padx = (defaultPadding, 0), pady = defaultPadding, sticky = "nsew")
-        ToolbarFrame(self).grid(row = 0, column = 0, columnspan = 2, padx = defaultPadding, pady = (defaultPadding, 0), sticky = "nsew")
+        self.geometry("800x600")
 
-        # self.update()
-        # self.minsize(self.winfo_width(), self.winfo_height())
+        self.mainPage = MainContentPage(self)
+        self.signIn = SignInPage(self)
+
+        self.openPage(self.signIn)
 
         self.mainloop()
+
+    def openPage(self, page):
+        page.grid(row = 0, column = 0, sticky = "nsew")

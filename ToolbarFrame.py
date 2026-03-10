@@ -13,8 +13,8 @@ class ToolbarFrame(ctk.CTkFrame):
         # test username, would normally come from an SQL query.
         accountUsername = "Daniel W"
 
-        self.bgGrad = CircleGradient(self, 250, 600, defaultButtonSize + (2 * defaultPadding), centreXOffset = -35)
-        self.bgGrad.grid(row = 0, column = 2, sticky = "w")
+        # self.bgGrad = CircleGradient(self, 250, 600, defaultSize + (2 * defaultPadding), centreXOffset = -35)
+        # self.bgGrad.grid(row = 0, column = 2, sticky = "w")
 
         self.accountButton = CircleButton(self, text = accountUsername[0])
         self.accountButton.grid(row = 0, column = 0, padx = (defaultPadding, 0), pady = defaultPadding)
