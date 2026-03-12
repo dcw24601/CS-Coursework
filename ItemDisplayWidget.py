@@ -56,7 +56,8 @@ class ItemDisplayWidget(ctk.CTkFrame):
 
 
     def onClick(self, event):
-        pass
+        self.master.clear()
+        self.master.displayItemPage(self.itemID)
 
 
     def setupEventHandling(self):

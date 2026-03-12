@@ -7,7 +7,7 @@ class ItemManager:
     def __init__(self):
 
         for i in range(10):
-            self.addItem((i, "The all-new iPhone " + str(i) + " Pro Max", "The latest and greatest in overpriced phone technology", "assets/test_image.bmp", 99999, i, 0, "Phone"))
+            self.addItem((i, "The all-new iPhone " + str(i) + " Pro Max", "The latest and greatest in overpriced phone technology", "assets/test_image.bmp", 99999, i, 1.2, "Phone"))
 
     def getItems(self, query):
         return self.items
@@ -38,17 +38,17 @@ class ItemManager:
     def getItemSellerID(self, itemID):
         for item in self.items:
             if item[0] == itemID:
-                return item[4]
+                return item[5]
 
     def getItemRiskScore(self, itemID):
         for item in self.items:
             if item[0] == itemID:
-                return item[4]
+                return item[6]
 
     def getItemCategory(self, itemID):
         for item in self.items:
             if item[0] == itemID:
-                return item[4]
+                return item[7]
 
 
 

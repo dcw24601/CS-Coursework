@@ -1,5 +1,8 @@
 import customtkinter as ctk
-from ItemDisplayWidget import *
+from ItemDisplayWidget import ItemDisplayWidget
+from ItemPageFrame import ItemPageFrame
+from Defaults import *
+from ItemManager import itemManager
 
 class SearchResultFrame(ctk.CTkScrollableFrame):
 
@@ -19,5 +22,16 @@ class SearchResultFrame(ctk.CTkScrollableFrame):
             ItemDisplayWidget(self, items[item][0]).grid(row = item, column = 0, sticky = "ew", pady = (0, defaultPadding))
 
 
+    def displayItemPage(self, itemID):
+        ItemPageFrame(self, itemID).grid(row = 0, column = 0, sticky = "nsew")
+
+
     def getSearchTerm(self):
         return self.master.master.master.searchBar.get()
+    
+
+    def clear(self):
+
+        for widget in self.winfo_children():
+            
+            widget.grid_remove()

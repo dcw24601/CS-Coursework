@@ -21,5 +21,6 @@ class Window(ctk.CTk):
 
         self.mainloop()
 
+
     def openPage(self, page):
         page.grid(row = 0, column = 0, sticky = "nsew")

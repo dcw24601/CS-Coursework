@@ -22,3 +22,4 @@ class SearchFrame(ctk.CTkFrame):
         resultsFrame = SearchResultFrame(self)
         resultsFrame.displayItems()
         resultsFrame.grid(row = 1, column = 0, columnspan = 2, sticky = "nsew", padx = defaultPadding, pady = defaultPadding)
+
