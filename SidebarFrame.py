@@ -7,7 +7,7 @@ class SidebarFrame(ctk.CTkFrame):
     expanded = False
     
     def __init__(self, master):
-        super().__init__(master, corner_radius = defaultCornerRadius + defaultPadding)
+        super().__init__(master, corner_radius = defaultCornerRadius)
 
         self.columnconfigure(1, weight = 1)
 

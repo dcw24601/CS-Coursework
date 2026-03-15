@@ -7,7 +7,7 @@ from Gradient import CircleGradient
 class ToolbarFrame(ctk.CTkFrame):
 
     def __init__(self, master):
-        super().__init__(master, corner_radius=defaultCornerRadius + defaultPadding)
+        super().__init__(master, corner_radius=defaultCornerRadius)
         self.columnconfigure(3, weight = 1)
 
         # test username, would normally come from an SQL query.

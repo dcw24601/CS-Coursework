@@ -7,7 +7,7 @@ from SearchResultFrame import SearchResultFrame
 class SearchFrame(ctk.CTkFrame):
 
     def __init__(self, master):
-        super().__init__(master, corner_radius = defaultCornerRadius + defaultPadding)
+        super().__init__(master, corner_radius = defaultCornerRadius)
 
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(1, weight = 1)
